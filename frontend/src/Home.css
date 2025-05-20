@@ -1,0 +1,20 @@
+ html,
+body {
+  overscroll-behavior: none;
+}
+/*
+body {
+  font-family: Arial Black, sans-serif;
+  text-align: center;
+  background: #000;
+  height: 200vh;
+}*/
+.homeMain{
+
+  width:100%;
+  font-family: Arial Black, sans-serif;
+  text-align: center;
+  background: #000;
+  height:200vh
+  
+}

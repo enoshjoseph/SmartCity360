@@ -1,0 +1,108 @@
+
+.headerhome{
+    width: 1140px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 50px;
+    align-items: center;
+    background-color: transparent;
+}
+.headerhome .logo{
+    font-weight: bold;
+}
+.headerhome nav a{
+    margin-left: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+nav .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.buttons button{
+    /*border: none;
+    background-color: #42dc70;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;*/
+    padding: 7px 25px;
+    border:none;
+    outline:none;
+    color:#fff;
+    cursor: pointer;
+    position:relative;
+    z-index:0;
+    border-radius: 12px;
+}
+.buttons button::after{
+    content: '';
+    z-index: -1;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background-color: #333;
+    left:0;
+    top:0;
+    border-radius: 10px;
+}
+.buttons button::before{
+    content: '';
+    background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8,#FF0000
+    );
+    position:absolute;
+    top:-2px;
+    left:-2px;
+    background-size:600%;
+    z-index: -1;
+    width:calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation:glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 1;
+
+}
+
+@keyframes glowing {
+    0% {background-position:  0 0;}
+    50% {background-position:  400% 0;}
+    100% {background-position:  0 0;}
+    
+}
+
+.buttons button:hover::before{
+    opacity: 1;
+
+}
+
+.buttons button:active:after{
+    background: transparent;
+}
+
+.buttons button:active{
+    color:#000;
+    font-weight:bold;
+}
+
+/*.buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}*/
+
+.buttons button:hover{
+   display:block;
+   filter: drop-shadow(0 0 10px #d5c96d);
+
+}
